@@ -69,11 +69,11 @@ const Gallery: React.FC = () => {
 
         {/* Modal/Lightbox */}
         {selectedImg && (
-          <div className="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4" onClick={() => setSelectedImg(null)}>
-            <button className="absolute top-4 right-4 md:top-8 md:right-8 text-white p-2 hover:bg-white/10 rounded-full transition-colors">
+          <div className="fixed inset-0 z-[9999] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-2 md:p-4" onClick={() => setSelectedImg(null)}>
+            <button className="absolute top-4 right-4 md:top-8 md:right-8 text-white p-2 hover:bg-white/10 rounded-full transition-colors z-10">
               <X className="w-6 h-6 md:w-8 md:h-8" />
             </button>
-            <img src={selectedImg} className="max-w-full max-h-full rounded-xl md:rounded-2xl shadow-2xl animate-in zoom-in-95 duration-300" />
+            <img src={selectedImg} className="max-w-[95vw] max-h-[90vh] w-auto h-auto object-contain rounded-lg md:rounded-2xl shadow-2xl" onClick={(e) => e.stopPropagation()} />
           </div>
         )}
       </div>

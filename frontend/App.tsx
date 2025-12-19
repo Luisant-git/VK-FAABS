@@ -52,10 +52,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col selection:bg-blue-100 selection:text-blue-900 relative">
+    <div className="min-h-screen flex flex-col selection:bg-blue-100 selection:text-blue-900 relative overflow-x-hidden">
       <Navbar currentPage={currentPage} onNavigate={navigateTo} />
       <SocialSidebar />
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-hidden">
         {renderPage()}
       </main>
       <Footer onNavigate={navigateTo} />
